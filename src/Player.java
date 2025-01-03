@@ -12,6 +12,12 @@ public class Player
         hand = new ArrayList<Card>();
     }
 
+    public void draw(Card card) {
 
+    }
+
+    public Card discard() {
+        return hand.get(0);
+    }
 
 }
