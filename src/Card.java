@@ -6,7 +6,11 @@ public class Card
 
     public CardSuit suit;
 
-    
+    public Card(int value, CardSuit suit)
+    {
+        this.value = value;
+        this.suit = suit;
+    }
 
     public enum CardSuit
     {
@@ -15,4 +19,8 @@ public class Card
         Coins,
         Clubs
     }
+
+    public static int MAX_VALUE = 10;
+
+    public static int MIN_VALUE = 1;
 }
