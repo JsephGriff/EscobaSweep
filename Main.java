@@ -4,7 +4,8 @@ public class Main
 {
     public static void main(String [] args)
     {
-        Game game = new Game();
+        ConsoleView c_view = new ConsoleView();
+        Game game = new Game(c_view);
         game.createDeck();
     }
 }

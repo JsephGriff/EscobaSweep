@@ -8,6 +8,8 @@ class GameTest {
     @Test
     public void testCanConstructGame()
     {
-        Game g = new Game();
+        ConsoleView c_view = new ConsoleView();
+        
+        Game g = new Game(c_view);
     }
 }
