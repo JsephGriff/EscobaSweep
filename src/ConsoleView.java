@@ -12,6 +12,18 @@ public class ConsoleView implements IView
     private OutputStream outputStream = System.out;
     private String suits = "⚔🍵🪙♣";
 
+    private String suitChar(Card.CardSuit suit)
+    {
+        switch (suit.ordinal())
+        {
+            case 0: return "⚔";
+            case 1: return "🍵";
+            case 2: return "🪙";
+            case 3: return "♣";
+        }
+        return "?";
+    }
+
     private void writeline(String s)
     {
         try
@@ -55,7 +67,7 @@ public class ConsoleView implements IView
         char id = 'a';
         for (Card card : cards)
         {
-            msg += " [" + id + "] " + String.valueOf(card.value) + suits.charAt(card.suit.ordinal());
+            msg += " [" + id + "]" + String.valueOf(card.value) + suitChar(card.suit);
             id++;
         }
         writeline(msg);
@@ -68,7 +80,7 @@ public class ConsoleView implements IView
         char id = '1';
         for (Card card : cards)
         {
-            msg += " [" + id + "] " + String.valueOf(card.value) + suits.charAt(card.suit.ordinal());
+            msg += " [" + id + "]" + String.valueOf(card.value) + suitChar(card.suit);
             id++;
         }
         writeline(msg);
