@@ -35,7 +35,7 @@ public class Game
         player_idx = 0;
     }
 
-    public void begin_game(ArrayList<Player> player_list)
+    public void begin_new_game(ArrayList<Player> player_list)
     {
         players.addAll(player_list);
 
