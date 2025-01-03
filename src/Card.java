@@ -8,8 +8,19 @@ public class Card
 
     public Card(int value, CardSuit suit)
     {
+
         this.value = value;
         this.suit = suit;
+
+        if (this.value > MAX_VALUE)
+        {
+            this.value = MAX_VALUE;
+        }
+
+        if (this.value < MIN_VALUE)
+        {
+            this.value = MIN_VALUE;
+        }
     }
 
     public enum CardSuit

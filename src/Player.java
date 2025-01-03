@@ -13,7 +13,7 @@ public class Player
     }
 
     public void draw(Card card) {
-
+        hand.add(card);
     }
 
     public Card discard() {
