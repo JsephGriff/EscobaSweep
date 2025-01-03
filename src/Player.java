@@ -1,10 +1,23 @@
 package src;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Player
-{
-    ArrayList<Card> hand;
+    {
+        int score;
+        List<Card> hand;
 
+    public Player() {
+        this.score = 0;
+        hand = new ArrayList<Card>();
+    }
+
+    public void draw(Card card) {
+
+    }
+
+    public Card discard() {
+        return hand.get(0);
+    }
 
 }
