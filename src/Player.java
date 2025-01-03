@@ -23,4 +23,8 @@ public class Player
         return hand.get(0);
     }
 
+    public void clear_hand()
+    {
+        hand.clear();
+    }
 }
