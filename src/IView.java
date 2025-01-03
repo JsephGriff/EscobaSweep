@@ -17,5 +17,5 @@ public interface IView
 
     void DisplayBoardCards(ArrayList<Card> cards);
     void DisplayPlayerCards(ArrayList<Card> cards);
-    Play GetPlay();
+    Play GetPlay(ArrayList<Card> boardCards, ArrayList<Card> playerCards);
 }
