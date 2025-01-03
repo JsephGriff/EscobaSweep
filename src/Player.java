@@ -2,8 +2,9 @@ package src;
 
 import java.util.*;
 
-public class Player
+public abstract class Player
 {
+
     int score;
     public List<Card> hand;
     public List<Card> point_pile;
@@ -33,7 +34,7 @@ public class Player
 
         return hand.get(idx);
     }
-
+    
     public void clear_hand()
     {
         hand.clear();
@@ -43,4 +44,8 @@ public class Player
     {
         point_pile.clear();
     }
+
+    //Either finds a series of cards to match, or empty and needs to discard.
+    Card[] playCard;
+
 }
