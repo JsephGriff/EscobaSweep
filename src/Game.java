@@ -58,7 +58,7 @@ public class Game
         LinkedList<Card> unshuffled = new LinkedList<>();
 
         // Add Card to Unshuffled Deck
-        for (int i = Card.MIN_VALUE; i < Card.MAX_VALUE; ++i)
+        for (int i = Card.MIN_VALUE; i <= Card.MAX_VALUE; ++i)
         {
             for (int j = 0; j < Card.CardSuit.values().length; ++j)
             {
@@ -67,6 +67,7 @@ public class Game
                 );
             }
         }
+        System.out.println("Unshuffled Size: " + unshuffled.size());
 
         // Randomly remove from unshuffled and add to deck
         while (!unshuffled.isEmpty())
@@ -77,4 +78,5 @@ public class Game
             deck.add(popped);
         }
     }
+
 }
