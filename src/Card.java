@@ -15,4 +15,8 @@ public class Card
         Coins,
         Clubs
     }
+
+    public static int MAX_VALUE = 10;
+
+    public static int MIN_VALUE = 1;
 }
