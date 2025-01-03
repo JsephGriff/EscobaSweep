@@ -13,7 +13,7 @@ public class Card
             throw new IllegalArgumentException("Card value is above Card.MAX_VALUE");
         }
 
-        if(value > MIN_VALUE)
+        if(value < MIN_VALUE)
         {
             throw new IllegalArgumentException("Card value is below Card.MIN_VALUE");
         }
