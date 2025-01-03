@@ -15,7 +15,7 @@ public class Game
 
     Stack<Card> deck;
 
-    ArrayList<Card> board_cards;
+    public ArrayList<Card> board_cards;
 
     Random random;
 
@@ -31,8 +31,18 @@ public class Game
         player_idx = 0;
     }
 
+    public void begin_game(ArrayList<Player> player_list)
+    {
+        players.addAll(player_list);
+
+
+
+    }
+
     public void begin_round()
     {
+        player_idx = random.nextInt(players.size());
+
         board_cards.clear();
 
         // Clear each player's hand
