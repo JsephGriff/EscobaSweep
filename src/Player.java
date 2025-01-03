@@ -5,14 +5,17 @@ import java.util.*;
 public abstract class Player
 {
 
-    int score;
+    public int score;
     public List<Card> hand;
     public List<Card> point_pile;
+    public int round_escobas;
 
     public Player()
     {
         this.score = 0;
         hand = new ArrayList<Card>();
+        point_pile = new ArrayList<>();
+        round_escobas = 0;
     }
 
     public void draw(Card card)
