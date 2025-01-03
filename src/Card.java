@@ -8,19 +8,20 @@ public class Card
 
     public Card(int value, CardSuit suit)
     {
+        if(value > MAX_VALUE)
+        {
+            throw new IllegalArgumentException("Card value is above Card.MAX_VALUE");
+        }
+
+        if(value < MIN_VALUE)
+        {
+            throw new IllegalArgumentException("Card value is below Card.MIN_VALUE");
+        }
 
         this.value = value;
         this.suit = suit;
 
-        if (this.value > MAX_VALUE)
-        {
-            this.value = MAX_VALUE;
-        }
 
-        if (this.value < MIN_VALUE)
-        {
-            this.value = MIN_VALUE;
-        }
     }
 
     public enum CardSuit
