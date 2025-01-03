@@ -2,13 +2,14 @@ package src;
 
 import java.sql.Time;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.Stack;
 
 public class Game
 {
-    int players;
+    ArrayList<Player> players;
 
     Stack<Card> deck;
 
