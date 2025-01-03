@@ -51,4 +51,5 @@ public abstract class Player
     //Either finds a series of cards to match, or empty and needs to discard.
     Card[] playCard;
 
+    static int HAND_MAX_SIZE = 3;
 }
