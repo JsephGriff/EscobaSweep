@@ -23,7 +23,7 @@ public abstract class Player
         hand.add(card);
     }
 
-    public Card discard(int idx)
+    public int discard(int idx)
     {
         if(idx > hand.size())
         {
@@ -35,7 +35,7 @@ public abstract class Player
             throw new IllegalArgumentException("Player's hand is empty");
         }
 
-        return hand.get(idx);
+        return idx;
     }
     
     public void clear_hand()
@@ -49,7 +49,7 @@ public abstract class Player
     }
 
     //Either finds a series of cards to match, or empty and needs to discard.
-    abstract Card[] playCard(Card[] boardCards);
+    abstract IView.Play playCard(Card[] boardCards);
 
     static int HAND_MAX_SIZE = 3;
 }
