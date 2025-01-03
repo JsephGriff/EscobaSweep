@@ -6,7 +6,11 @@ public class Card
 
     public CardSuit suit;
 
-    
+    public Card(int value, CardSuit suit)
+    {
+        this.value = value;
+        this.suit = suit;
+    }
 
     public enum CardSuit
     {

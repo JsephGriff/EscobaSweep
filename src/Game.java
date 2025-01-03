@@ -13,8 +13,12 @@ public class Game
     {
         LinkedList<Card> unshuffled = new LinkedList<>();
 
-        for (int i = 0; i < 10; i++) {
-
+        for (int i = Card.MIN_VALUE; i < Card.MAX_VALUE; ++i)
+        {
+            for (int j = 0; j < Card.CardSuit.values().length; ++j)
+            {
+                deck.add
+            }
         }
     }
 }
