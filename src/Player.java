@@ -49,7 +49,7 @@ public abstract class Player
     }
 
     //Either finds a series of cards to match, or empty and needs to discard.
-    Card[] playCard;
+    abstract Card[] playCard(Card[] boardCards);
 
     static int HAND_MAX_SIZE = 3;
 }
