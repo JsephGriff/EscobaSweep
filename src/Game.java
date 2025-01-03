@@ -109,7 +109,7 @@ public class Game
 
             do
             {
-                player_turn = user_interface.GetPlay();
+                player_turn = user_interface.GetPlay(board_cards, (ArrayList<Card>) turn_player.hand);
 
                 int turn_value = turn_player.hand.get(player_turn.playerCardIndex).value;
 
