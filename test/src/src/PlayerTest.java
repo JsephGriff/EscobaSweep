@@ -9,6 +9,6 @@ class PlayerTest {
 
     @Test
     void testCanConstructPlayer() {
-        Player player = new Player();
+        Player player = new ComputerPlayer();
     }
 }

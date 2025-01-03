@@ -37,13 +37,13 @@ public class ComputerPlayer extends Player
             {
                 if (scoreVal == option.value ) { //Hardcoded to only pick a single card.
                     cardsToRemove.add(cardOrder.indexOf(option));
-                    return new IView.Play(super.discard(hand.indexOf(card)),
+                    return new IView.Play(hand.indexOf(card),
                             cardsToRemove);
                 }
             }
         }
 
-        return  new IView.Play(discard(0));
+        return  new IView.Play(0);
     }
 
 }

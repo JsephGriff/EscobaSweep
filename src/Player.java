@@ -23,7 +23,7 @@ public abstract class Player
         hand.add(card);
     }
 
-    public int discard(int idx)
+    public Card discard(int idx)
     {
         if(idx > hand.size())
         {
@@ -35,7 +35,7 @@ public abstract class Player
             throw new IllegalArgumentException("Player's hand is empty");
         }
 
-        return idx;
+        return hand.remove(idx);
     }
     
     public void clear_hand()
