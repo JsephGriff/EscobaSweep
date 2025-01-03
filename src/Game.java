@@ -31,6 +31,21 @@ public class Game
         player_idx = 0;
     }
 
+    public void begin_round()
+    {
+        board_cards.clear();
+
+        // Clear each player's hand
+        for(Player p: players)
+        {
+            p.clear_hand();
+        }
+
+        createDeck();
+        deal_to_board();
+        deal_to_players();
+    }
+
     public void deal_to_board()
     {
         for(int i = 0; i < 4; ++i)
@@ -55,6 +70,7 @@ public class Game
 
     public void createDeck()
     {
+        deck.clear();
         LinkedList<Card> unshuffled = new LinkedList<>();
 
         // Add Card to Unshuffled Deck

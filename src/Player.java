@@ -5,7 +5,8 @@ import java.util.*;
 public class Player
 {
     int score;
-    List<Card> hand;
+    public List<Card> hand;
+    public List<Card> point_pile;
 
     public Player()
     {
@@ -18,13 +19,28 @@ public class Player
         hand.add(card);
     }
 
-    public Card discard()
+    public Card discard(int idx)
     {
-        return hand.get(0);
+        if(idx > hand.size())
+        {
+            throw new IllegalArgumentException("Index " + idx + " is out of bounds for this hand");
+        }
+
+        if(hand.isEmpty())
+        {
+            throw new IllegalArgumentException("Player's hand is empty");
+        }
+
+        return hand.get(idx);
     }
 
     public void clear_hand()
     {
         hand.clear();
+    }
+
+    public void clear_point_pile()
+    {
+        point_pile.clear();
     }
 }
