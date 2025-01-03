@@ -2,16 +2,20 @@ package src;
 
 import java.util.*;
 
-public class Player
+public abstract class Player
 {
-    int score;
+
+    public int score;
     public List<Card> hand;
     public List<Card> point_pile;
+    public int round_escobas;
 
     public Player()
     {
         this.score = 0;
         hand = new ArrayList<Card>();
+        point_pile = new ArrayList<>();
+        round_escobas = 0;
     }
 
     public void draw(Card card)
@@ -19,7 +23,7 @@ public class Player
         hand.add(card);
     }
 
-    public Card discard(int idx)
+    public int discard(int idx)
     {
         if(idx > hand.size())
         {
@@ -31,9 +35,9 @@ public class Player
             throw new IllegalArgumentException("Player's hand is empty");
         }
 
-        return hand.get(idx);
+        return idx;
     }
-
+    
     public void clear_hand()
     {
         hand.clear();
@@ -43,4 +47,9 @@ public class Player
     {
         point_pile.clear();
     }
+
+    //Either finds a series of cards to match, or empty and needs to discard.
+    abstract IView.Play playCard(Card[] boardCards);
+
+    static int HAND_MAX_SIZE = 3;
 }
