@@ -10,7 +10,16 @@ public interface IView
         boolean exitApplication = false;
         int playerCardIndex = 0;
         ArrayList<Integer> boardCardIndices =  new ArrayList<>();
+        public Play () {}
+        public Play (int playerCardIndex) {
+            this.playerCardIndex = playerCardIndex;
+        }
+        public Play (int playerCardIndex, ArrayList<Integer> boardCardIndices) {
+            this.playerCardIndex = playerCardIndex;
+            this.boardCardIndices = boardCardIndices;
+        }
     };
+
 
     void DisplayErrorMessage(String message);
     void DisplayTutorialMessage(String message);
