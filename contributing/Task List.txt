@@ -1,0 +1,26 @@
+Classes Needed:
+
+* IView (following MVC terminology for "View")
+  - ConsoleView
+  - GuiView (for the future)
+
+* Player
+  -> needs to take IView as a constructor input for display.
+  - HumanPlayer
+  - ComputerPlayerEasy (simple strategy)
+  - ComputerPlayerHard (complex strategy, harder to beat)
+
+* Game
+  -> needs to take IView as a constructor input for display.
+  -> needs to take a list of Players when starting a game.
+  -  have a function to process a round.
+    
+    Game(IView)
+    Game.StartNewGame(ArrayList<Player> players)
+	
+* Card
+
+* Main
+  - Instantiate IView class.
+  - Create players
+  - Start game.
