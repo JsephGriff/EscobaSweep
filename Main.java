@@ -1,9 +1,9 @@
-package src;
+import src.*;
 
 public class Main
 {
     public static void main(String [] args)
     {
-        System.out.println("Main is Running");
+        System.out.println("GAH");
     }
 }
